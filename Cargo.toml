@@ -1,0 +1,15 @@
+[package]
+name = "testando"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+rocket = { version = "0.5.1", features = ["json", "serde_json"] }
+serde = { version = "1.0", features = ["derive"] }
+dotenv = "0.15.0"
+
+uuid = { version = "0.8.2", features = ["serde", "v4"] }
+diesel = { version = "1.4.5", features = ["chrono", "postgres", "r2d2", "uuidv07"] }
+
+[dev-dependencies]
+diesel_migrations = "2.0"

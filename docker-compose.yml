@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:17beta2
+    container_name: postgresql_site_template
+    environment:
+      POSTGRES_USER: usuario_do_banco
+      POSTGRES_PASSWORD: senha_do_banco
+      POSTGRES_DB: nome_do_banco
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:
