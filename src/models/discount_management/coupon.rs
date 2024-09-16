@@ -21,7 +21,7 @@ impl Coupon {
     /// Verifica se o cupom está expirado.
     pub fn is_expired(&self, current_date: &str) -> bool {
         if let Some(expiration) = &self.expiration_date {
-            return current_date > expiration;
+            return current_date > expiration.as_str(); // Correção aqui
         }
         false
     }

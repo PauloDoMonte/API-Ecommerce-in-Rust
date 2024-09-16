@@ -29,8 +29,8 @@ impl Wishlist {
     }
 
     /// Lista todos os itens na lista de desejos.
-    pub fn list_items(&self) -> Vec&String> {
-        self.items.iter().collect()
+    pub fn list_items(&self) -> Vec<String> {
+        self.items.iter().cloned().collect()
     }
 }
 
